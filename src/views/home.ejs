@@ -1,0 +1,64 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="/creatPage">creat</a>
+        <!-- <a href="#contact">Contact</a>
+        <a href="#about">About</a> -->
+    </div>
+    <div class="table">
+
+        <table>
+            <tr>
+                <th>id</th>
+                <th>username</th>
+                <th>password</th>
+                <th>actions</th>
+            </tr>
+            <!-- <% for(let i=0; i< accounts.length; i++) {%>
+                <tr>
+                    <td>
+                        <%= accounts[i].id %>
+                    </td>
+                    <td>
+                        <%= accounts[i].username %>
+                    </td>
+                    <td>
+                        <%= accounts[i].password %>
+                    </td>
+                    <td>
+                        <button>edit</button>
+                        <button>delete</button>
+                    </td>
+                </tr>
+            <% }%> -->
+            <% accounts.forEach((account)=> {%>
+                <tr>
+                    <td>
+                        <%= account.id %>
+                    </td>
+                    <td>
+                        <%= account.username %>
+                    </td>
+                    <td>
+                        <%= account.password %>
+                    </td>
+                    <td>
+                        <button>edit</button>
+                        <button>delete</button>
+                    </td>
+                </tr>
+                <% });%>
+        </table>
+    </div>
+</body>
+
+</html>
