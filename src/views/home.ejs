@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <link rel="stylesheet" href="./css/home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
     <div class="topnav">
         <a class="active" href="/">Home</a>
         <a href="/creatPage">creat</a>
-        <!-- <a href="#contact">Contact</a>
-        <a href="#about">About</a> -->
     </div>
     <div class="table">
 
@@ -52,13 +51,16 @@
                         <%= account.password %>
                     </td>
                     <td>
-                        <button>edit</button>
-                        <button>delete</button>
+                        <button>
+                            <a href="/updatePage/<%= account.id %>">edit</a>
+                        </button>
+                        <button class="delete" id="<%=account.id%>">Del</button>
                     </td>
                 </tr>
                 <% });%>
         </table>
     </div>
+    <script src="js/home.js"></script>
 </body>
 
 </html>

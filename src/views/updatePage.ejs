@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creat User</title>
-    <link rel="stylesheet" href="./css/home.css">
+    <title>Update User</title>
+    <link rel="stylesheet" href="/css/home.css">
 </head>
 
 <body>
     <div class="topnav">
-        <a href="/">Home</a>
-        <a class="active" href="/creatPage">creat</a>
+        <a class="active" href="/">Home</a>
+        <a href="/creatPage">creat</a>
     </div>
-    <form action="/creat-user" method="post">
+    <form action="/update/<%=id%>" method="post">
         <fieldset>
             <legend>Login</legend>
             <div class="input-group">
                 <label>username</label>
-                <input type="text" id="username" name="username">
+                <input type="text" id="username" name="username" value=<%=account.username%>>
             </div>
             <div class="input-group">
                 <label>password</label>
-                <input type="password" id="password" name="password">
+                <input type="text" id="password" name="password" value=<%=account.password%>>
             </div>
-            <button class="creat">creat</button>
+            <button>save</button>
         </fieldset>
     </form>
 </body>
